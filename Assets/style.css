@@ -1,0 +1,287 @@
+body {
+  background-image: url(../Assets/image/background.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  display: block;
+  min-width: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* ___________________beginning of side-bar________________________ */
+.sidebar_menu {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #a18e78c6;
+  display: flex;
+  position: fixed;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 40%;
+  height: 50%;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.icon span {
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+#position {
+  color: #ffffff;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.nav_links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  align-items: center;
+  border-top: 1px dotted rgb(102, 88, 58);
+}
+
+.nav_links a {
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px dotted rgb(102, 88, 58);
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+  
+.nav_links a:hover {
+  color: rgb(78, 62, 16);
+}
+
+.social {
+  margin: 0;
+  padding-left: 13px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 10rem;
+}
+
+.social li a {
+  padding: 13px;
+  height: 100%;
+}
+
+.social img {
+  width: 30px;
+  height: auto;
+}
+
+.social img:hover {
+  padding: 5px;
+}
+
+/* _______________________end of side-bar_______________________ */
+/* top | right | bottom | left */
+main {
+  margin: 0 300px 100px 500px;
+  padding-top: 150px;
+  background-color: rgba(255, 255, 255, 0.467);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150rem;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#home {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 100px;
+  padding: 25px;
+  text-align: left;
+}
+
+.info {
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.project-page {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 0 200px;
+  padding: 5px;
+  text-align: center;
+}
+
+.text {
+  font-style: oblique;
+}
+
+.card .text {
+  position: relative;
+  bottom: 30px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.card:hover .text {
+  visibility: visible;
+  background-color: #ffffffca;
+}
+
+.project-links img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.project-links img:hover {
+  box-shadow: 0 0 6px 3px rgba(179, 125, 25, 0.588);
+}
+
+.statement {
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px;
+  border: 5px dotted #DDAF94;
+  border-radius: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 130px;
+  font-size: 30px;
+}
+
+input, textarea {
+  box-sizing: border-box;
+  width: 300px;
+  margin-left: 30px;
+  border: 1px dotted #4F4846;
+}
+
+textarea {
+  vertical-align: top;
+  height: 60px;
+}
+
+.button {
+  padding-top:20px;
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+footer {
+  color: rgb(156, 140, 107);
+  margin-top: 2%;
+  height: 50; 
+  width: 100%;
+  text-align: center;
+}
+
+/* Tablets - header changes color */
+/* top | right | bottom | left */
+@media screen and (max-width: 992px) {
+  main {
+    align-items: center;
+    margin: 100px 100px 100px 250px;
+  }
+}
+
+/* Large smartphones - content margin and font smaller */  
+@media screen and (max-width: 768px) {
+  .sidebar_menu {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+  }
+  main {
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin: 200px 0 0 0px;
+  }
+
+  #home {
+    font-size: 60px;
+  }
+  .project-page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .icon, .social {
+    display: none;
+  }
+}
+/* Small smartphones - image placeholders change color */  
+@media screen and (max-width: 367px) {
+  .icon {
+    display: none;
+  }
+  main {
+    width: 0;
+    height: 0;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+  }
+  section {
+   padding: 0;
+  }
+
+  .info {
+    font-size: 20px;
+  }
+
+  .nav_links a{
+    text-align: center;
+    float: none;
+    display: block;
+  }
+}
+  
