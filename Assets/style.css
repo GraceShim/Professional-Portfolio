@@ -7,7 +7,8 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-/* ___________________beginning of side-bar________________________ */
+/* ___________________Beginning of side-bar________________________ */
+/* Created a navigation bar to be shown through out the webpage. */
 .sidebar_menu {
   margin: 0;
   padding: 0;
@@ -22,13 +23,11 @@ body {
   overflow: hidden;
   z-index: 3;
 }
-
+/* Adjustment to avatar */
 .photo {
-  border-radius: 50%;
-  width: 40%;
-  height: 50%;
+  width: 70%;
 }
-
+/* Applied flex and align elements for the icon class to display properly on the menu bar */
 .icon {
   width: 100%;
   display: flex;
@@ -38,14 +37,14 @@ body {
   justify-content: center;
   padding: 2rem 0;
 }
-
+/* Changed font styling in span element  */
 .icon span {
   color: #ffffff;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
   font-size: 50px;
   margin-top: 10px;
 }
-
+/* Used identifier to apply styling */
 #position {
   color: #ffffff;
   font-family:'Courier New', Courier, monospace;
@@ -72,11 +71,11 @@ body {
   font-size: 30px;
   text-decoration: none;
 }
-  
+ /* When hovering menu links will change color. */ 
 .nav_links a:hover {
   color: rgb(78, 62, 16);
 }
-
+/* Added height rem and padding. */
 .social {
   margin: 0;
   padding-left: 13px;
@@ -85,23 +84,23 @@ body {
   flex-wrap: wrap;
   height: 10rem;
 }
-
+/* Used padding on the links to give spacing. */
 .social li a {
   padding: 13px;
   height: 100%;
 }
-
+/* Image styling applied to be displayed properly  */
 .social img {
   width: 30px;
   height: auto;
 }
-
+/* When hovering icons will have a shrinking effect. */
 .social img:hover {
   padding: 5px;
 }
+/* _______________________End of side-bar_______________________ */
 
-/* _______________________end of side-bar_______________________ */
-/* top | right | bottom | left */
+/* main element will focus elements after the menu bar */
 main {
   margin: 0 300px 100px 500px;
   padding-top: 150px;
@@ -109,13 +108,13 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  height: 150rem;
+  height: 230rem;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/* Used id to add styling  */
 #home {
   margin: 0;
   display: flex;
@@ -125,46 +124,43 @@ main {
   padding: 25px;
   text-align: left;
 }
-
+/* Applied padding and font size to have it display it within the main background */
 .info {
   padding: 30px;
   font-size: 30px;
   text-align: center;
 }
-
+/* Padding applied on left and right so it wraps nicely */
 .project-page {
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
-
+/* Applied flex properly dispay the imgs within main */
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-
+/* Flex applied to have some imgs bigger than others */
 .card {
   flex: 1 0 200px;
   padding: 5px;
   text-align: center;
 }
-
-.text {
-  font-style: oblique;
-}
-
+/* Photo description hidden */
 .card .text {
   position: relative;
   bottom: 30px;
   left: 0px;
   visibility: hidden;
 }
-
+/* Photo description visible and will be shown once cursor hovers over the imgs. */
 .card:hover .text {
   visibility: visible;
+  font-style: oblique;
   background-color: #ffffffca;
 }
-
+/* Not sure if aspect ratio was applied correctly. However, it has changed project imgs to same sizes. Other elements used to have image display nicely. */
 .project-links img {
   display: flex;
   flex-wrap: wrap;
@@ -172,15 +168,15 @@ main {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
-
+/* When hovering shadow with color will appear. */
 .project-links img:hover {
   box-shadow: 0 0 6px 3px rgba(179, 125, 25, 0.588);
 }
-
+/* Applied form to have users reach out to the web developer */
 .statement {
   text-align: center;
 }
-
+/* Form created with styling */
 form {
   margin: 0 auto;
   width: 500px;
@@ -188,34 +184,34 @@ form {
   border: 5px dotted #DDAF94;
   border-radius: 30px;
 }
-
+/* Applied styling and adjustments  */
 label {
   display: inline-block;
   width: 130px;
-  font-size: 30px;
+  font-size: 25px;
 }
-
+/* Created border to give more texture to the form */
 input, textarea {
   box-sizing: border-box;
   width: 300px;
   margin-left: 30px;
   border: 1px dotted #4F4846;
 }
-
+/* Applied textarea to have an area for comments */
 textarea {
   vertical-align: top;
   height: 60px;
 }
-
+/* Padding applied to adjust the spacing */
 .button {
-  padding-top:20px;
+  padding-top: 20px;
   text-align: center;
 }
-
+/* Styling applied on the labels */
 .text-right {
   text-align: right;
 }
-
+/* styling and margin adjustments made to footer */
 footer {
   color: rgb(156, 140, 107);
   margin-top: 2%;
@@ -224,16 +220,32 @@ footer {
   text-align: center;
 }
 
-/* Tablets - header changes color */
-/* top | right | bottom | left */
+/* Tablets - header changes color - margin and padding adjusted. Removed social media links.*/
 @media screen and (max-width: 992px) {
+  .sidebar_menu {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+  }
+  .social {
+    display: none;
+  }
+  .photo {
+    width: 10%;
+  }
   main {
+    width: fit-content;
+    height: fit-content;
     align-items: center;
-    margin: 100px 100px 100px 250px;
+    margin: 400px 0 0 0;
+  }
+  .project-page {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-/* Large smartphones - content margin and font smaller */  
+/* Large smartphones - content margin and font smaller. Removed padding and margins and made font sizes smaller. Removed social media links.*/  
 @media screen and (max-width: 768px) {
   .sidebar_menu {
     width: 100%;
@@ -246,7 +258,6 @@ footer {
     align-items: center;
     margin: 200px 0 0 0px;
   }
-
   #home {
     font-size: 60px;
   }
@@ -258,11 +269,8 @@ footer {
     display: none;
   }
 }
-/* Small smartphones - image placeholders change color */  
+/* Small smartphones - removed padding and margins and made font sizes smaller. Removed social media links.*/  
 @media screen and (max-width: 367px) {
-  .icon {
-    display: none;
-  }
   main {
     width: 0;
     height: 0;
@@ -270,18 +278,16 @@ footer {
     align-items: center;
     margin: 0;
   }
-  section {
-   padding: 0;
-  }
-
   .info {
     font-size: 20px;
   }
-
   .nav_links a{
     text-align: center;
     float: none;
     display: block;
+  }
+  .icon, .social {
+    display: none;
   }
 }
   

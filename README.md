@@ -5,17 +5,16 @@
 
 # Implementation
 * Media Queries
-  * Basic concept of flexbox applied.
-* Accessible alt attributes
-
-* Created comments on changed made to index.html and style.css files
+  * Basic concept of flexbox and styling applied.
+* Accessible alt attributes.
+* Comments made to HMTL and CSS.
 
 # Screenshot
-![screenshot](/Assets/image/screenshot_portfolio.png)
+![screenshot](/Assets/image/screenshot-portfolio.png)
 
 # Link
-* GitHub Repository: https://github.com/GraceShim/Challenge01.git
-* Webpage: https://graceshim.github.io/Challenge01/
+* GitHub Repository: git@github.com:GraceShim/Professional-Portfolio.git
+* Webpage: https://graceshim.github.io/Professional-Portfolio/
 
 # Author
 * Grace D. Shim https://github.com/GraceShim
