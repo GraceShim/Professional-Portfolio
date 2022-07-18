@@ -13,7 +13,7 @@
 ![screenshot](/Assets/image/screenshot-portfolio.png)
 
 # Link
-* GitHub Repository: git@github.com:GraceShim/Professional-Portfolio.git
+* GitHub Repository: https://github.com/GraceShim/Code-Refactor-Accessibility.git
 * Webpage: https://graceshim.github.io/Professional-Portfolio/
 
 # Author
