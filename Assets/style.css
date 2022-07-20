@@ -142,10 +142,18 @@ main {
   margin-top: 10px;
 }
 /* Flex applied to have some imgs bigger than others */
-.card {
-  flex: 1 0 200px;
+#first-row {
+  width: 500px;
+  height: 100%;
   padding: 5px;
-  text-align: center;
+  flex: 1 1 auto;
+}
+
+#second-row {
+  width: 200px;
+  height: 100%;
+  padding: 5px;
+  flex: 1 1 auto;
 }
 /* Photo description hidden */
 .card .text {
@@ -180,21 +188,22 @@ main {
 form {
   margin: 0 auto;
   width: 500px;
-  padding: 10px;
-  border: 5px dotted #DDAF94;
+  padding: 15px;
+  background-color: #b5a48860;
+  border: 5px dotted #debeac;
   border-radius: 30px;
 }
 /* Applied styling and adjustments  */
 label {
   display: inline-block;
   width: 130px;
-  font-size: 25px;
+  font-size: 25px; 
 }
 /* Created border to give more texture to the form */
 input, textarea {
   box-sizing: border-box;
   width: 300px;
-  margin-left: 30px;
+  margin-left: 80px;
   border: 1px dotted #4F4846;
 }
 /* Applied textarea to have an area for comments */
@@ -204,12 +213,17 @@ textarea {
 }
 /* Padding applied to adjust the spacing */
 .button {
-  padding-top: 20px;
+  display: inline-block;
   text-align: center;
+  padding-top: 20px;
+  margin-left: 200px;
 }
 /* Styling applied on the labels */
 .text-right {
-  text-align: right;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  font-weight: normal;
+  margin-left: 35%;
+  text-align: center;
 }
 /* styling and margin adjustments made to footer */
 footer {
@@ -243,6 +257,19 @@ footer {
     padding-left: 0;
     padding-right: 0;
   }
+  #first-row {
+    width: 300px;
+    height: 100%;
+    padding: 5px;
+    flex: 1 1 auto;
+  }
+  
+  #second-row {
+    width: 250px;
+    height: 100%;
+    padding: 5px;
+    flex: 0 1 auto;
+  }
 }
 
 /* Large smartphones - content margin and font smaller. Removed padding and margins and made font sizes smaller. Removed social media links.*/  
@@ -268,6 +295,19 @@ footer {
   .icon, .social {
     display: none;
   }
+  #first-row {
+    width: 210px;
+    height: 100%;
+    padding: 5px;
+    flex: 1 1 auto;
+  }
+  
+  #second-row {
+    width: 130px;
+    height: 100%;
+    padding: 5px;
+    flex: 1 0 auto;
+}
 }
 /* Small smartphones - removed padding and margins and made font sizes smaller. Removed social media links.*/  
 @media screen and (max-width: 367px) {
